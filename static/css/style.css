@@ -1,0 +1,1088 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;  /* light background */
+  color: #262626;  /* dark grey text */
+  padding-bottom: 70px; /* for bottom nav */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+
+.header-right .icon {
+  font-size: 1.5rem;
+  color: #262626;
+  margin-left: 15px;
+}
+
+.header-right .icon:hover {
+  color: #0095f6;
+}
+
+
+/* Container */
+.container {
+  max-width: 935px;  /* similar to Instagram's max width */
+  margin: 80px auto 20px; /* account for fixed header */
+  padding: 0 20px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  color: #262626;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-top: 1px solid #dbdbdb;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 1.5rem;
+}
+
+.bottom-nav a:hover {
+  color: #0095f6;
+}
+
+
+
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.card-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #262626;
+}
+
+/* Fallback styling for card-actions */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.card-actions .action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #fff;
+  background: #0095f6; /* Instagram-like blue */
+  border-right: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.card-actions .action-btn:hover {
+  background: #8e8e8e;
+}
+
+.card-actions .action-btn:last-child {
+  border-right: none;
+}
+
+.card-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+}
+
+.enhanced-post-card {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Enhanced Post Card Header */
+.enhanced-post-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.enhanced-post-card .author-info {
+  display: flex;
+  align-items: center;
+}
+
+.enhanced-post-card .card-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #dbdbdb;
+}
+
+.enhanced-post-card .author-username {
+  font-weight: 600;
+  color: #262626;
+  text-decoration: none;
+}
+
+/* Enhanced Post Card Media */
+.enhanced-post-card .card-media img,
+.enhanced-post-card .card-media video {
+  width: 100%;
+  display: block;
+}
+
+/* Enhanced Post Card Actions */
+.enhanced-post-card .card-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: 1px solid #efefef;
+}
+
+/* Updated Action Buttons for Enhanced Post Card */
+.enhanced-post-card .action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #262626; /* default dark grey */
+  font-size: 20px; /* icon size */
+  background: transparent;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.enhanced-post-card .action-btn:hover {
+  color: #000; /* hover turns black */
+}
+
+/* Ensure liked like button stays red even on hover */
+.enhanced-post-card .action-btn.like-btn.liked {
+  color: #000; /* liked heart in Instagram red */
+}
+.enhanced-post-card .action-btn.like-btn.liked:hover {
+  color: #000;
+}
+
+/* Enhanced Post Card Caption */
+.enhanced-post-card .card-caption {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.enhanced-post-card .likes-count {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Enhanced Post Card Footer */
+.enhanced-post-card .card-footer {
+  padding: 5px 15px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+/* Post Options Dropdown */
+.post-options {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #262626;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: #fafafa;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Card Content */
+.card-content p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card-content img,
+.card-content video {
+  max-width: 100%;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* Profile Navigation */
+.profile-nav {
+  margin: 15px 0;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+}
+
+.profile-nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #262626;
+  font-weight: 500;
+}
+
+.profile-nav a.active {
+  border-bottom: 1px solid #262626;
+}
+
+/* Profile Grid (for user posts) */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+.profile-grid img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Grid Items Styling */
+.profile-grid .grid-item {
+  display: block;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image Posts Span More Rows for a Larger Look */
+.profile-grid .grid-item.image-post {
+  grid-row: span 2;
+}
+.profile-grid .grid-item.image-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Posts are Smaller and Centered */
+.profile-grid .grid-item.text-post {
+  grid-row: span 1;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.video-thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Forms */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+form input[type="submit"] {
+  background: #0095f6;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #007ac1;
+}
+
+/* Alerts */
+.alert {
+  background: #ed4956;
+  color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Search Box */
+.search-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 25px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-box button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-box button:hover {
+  color: #0095f6;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.search-results li a:hover {
+  background: #f9f9f9;
+}
+
+.search-results img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  color: #262626;
+  border-top: 1px solid #dbdbdb;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-left h1 {
+    font-size: 1.3rem;
+  }
+  .bottom-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* ---------- Comments Section Styling ---------- */
+.comment {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.comment-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* ensures circular profile pic */
+  object-fit: cover;
+  margin-right: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #262626;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.comment-date {
+  font-size: 0.75rem;
+  color: #8e8e8e;
+}
+
+.comment-body {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.comment-actions {
+  margin-top: 5px;
+}
+
+.reply-btn {
+  font-size: 0.8rem;
+  color: #007ac1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.reply-btn:hover {
+  color: #005f8c;
+}
+
+.profile-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  transition: border-color 0.3s;
+}
+.profile-tabs .tab.active {
+  border-bottom: 2px solid #262626;
+  color: #262626;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.recommendation-item {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.recommendation-item:hover {
+  transform: scale(1.03);
+}
+
+.recommendation-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.recommendation-item p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #262626;
+  margin: 0;
+}
+
+/* Modal Popup Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 8px;
+  position: relative;
+}
+.modal .close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal .close:hover,
+.modal .close:focus {
+  color: #000;
+}
+
+/* Overlay for multiple media */
+.multiple-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  padding: 4px;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* Video Thumbnail Overlay */
+.video-thumbnail-container {
+  position: relative;
+}
+.video-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid Item Styling */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+.profile-grid .grid-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+.profile-grid .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark Theme Styles */
+/* ----------------- Dark Theme Overrides ----------------- */
+/* ----------------- Dark Theme Overrides ----------------- */
+body.dark {
+  background-color: #181818;
+  color: #e0e0e0;
+}
+
+/* Header & Navigation */
+body.dark header {
+  background: #242424;
+  border-bottom: 1px solid #333;
+}
+body.dark header h1 {
+  color: #e0e0e0;
+}
+body.dark .header-right .icon,
+body.dark #dark-mode-toggle {
+  color: #e0e0e0;
+}
+body.dark .header-right .icon:hover,
+body.dark #dark-mode-toggle:hover {
+  color: #0095f6;
+}
+body.dark .container {
+  background-color: #181818;
+}
+body.dark nav.bottom-nav {
+  background: #242424;
+  border-top: 1px solid #333;
+}
+body.dark .bottom-nav a {
+  color: #e0e0e0;
+}
+body.dark .bottom-nav a:hover {
+  color: #0095f6;
+}
+body.dark footer {
+  background: #242424;
+  border-top: 1px solid #333;
+  color: #e0e0e0;
+}
+
+/* Cards & Post Details */
+body.dark .card,
+body.dark .enhanced-post-card {
+  background: #242424;
+  border: 1px solid #333;
+}
+body.dark .card-header h3,
+body.dark .enhanced-post-card .author-username,
+body.dark .enhanced-post-card .card-caption,
+body.dark .enhanced-post-card .card-footer,
+body.dark .card-content p,
+body.dark .enhanced-post-card .card-caption p {
+  color: #e0e0e0;
+}
+body.dark .card-actions .action-btn {
+  color: #e0e0e0;
+}
+body.dark .card-actions .action-btn:hover {
+  color: #fff;
+}
+
+/* Dropdowns */
+body.dark .dropdown-content {
+  background: #242424;
+  border: 1px solid #333;
+}
+body.dark .dropdown-content a {
+  color: #e0e0e0;
+}
+body.dark .dropdown-content a:hover {
+  background: #333;
+}
+
+/* Profile & Tabs */
+body.dark .profile-nav a {
+  color: #e0e0e0;
+}
+body.dark .profile-nav a.active {
+  border-bottom: 1px solid #e0e0e0;
+}
+body.dark .profile-tabs .tab {
+  color: #e0e0e0 !important;
+}
+body.dark .profile-tabs .tab i {
+  color: #e0e0e0 !important;
+}
+body.dark .profile-grid .grid-item {
+  background: #242424;
+  border: 1px solid #333;
+}
+body.dark .profile-grid .grid-item.text-post {
+  background: #181818;
+  color: #e0e0e0;
+}
+
+/* New overrides for profile email and comment usernames */
+body.dark .profile-bio {
+  color: #e0e0e0 !important;
+}
+body.dark .comments-list a {
+  color: #e0e0e0 !important;
+}
+
+/* Slider */
+body.dark .slider-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: #e0e0e0;
+}
+body.dark .slider-dots span {
+  background: rgba(224, 224, 224, 0.7);
+}
+body.dark .slider-dots span.active {
+  background: #e0e0e0;
+}
+
+/* Forms (New Post, Profile Settings, Comment, etc.) */
+body.dark form {
+  background: #242424;
+}
+body.dark form input[type="text"],
+body.dark form input[type="email"],
+body.dark form input[type="password"],
+body.dark form textarea {
+  background: #181818;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+body.dark form input[type="text"]::placeholder,
+body.dark form input[type="email"]::placeholder,
+body.dark form input[type="password"]::placeholder,
+body.dark form textarea::placeholder {
+  color: #aaa;
+}
+body.dark form input[type="submit"] {
+  background: #0095f6;
+  color: #fff;
+}
+
+/* Alerts */
+body.dark .alert {
+  background: #d32f2f;
+}
+
+/* Search Box */
+body.dark .search-box {
+  background: #333;
+}
+body.dark .search-box input {
+  color: #e0e0e0;
+}
+body.dark .search-box button {
+  color: #e0e0e0;
+}
+body.dark .search-results li a {
+  color: #e0e0e0;
+}
+
+/* Comments Section */
+body.dark .comment {
+  background: #242424;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+body.dark .comment-header .comment-author {
+  color: #e0e0e0;
+}
+body.dark .comment-date {
+  color: #aaa;
+}
+body.dark .comment-body {
+  color: #e0e0e0;
+}
+
+/* Override dropbtn (⋮) color */
+body.dark .dropbtn {
+  color: #e0e0e0 !important;
+}
+
+/* Override new-post-container background, border, and text color */
+body.dark .new-post-container {
+  background: #242424 !important;
+  border: 1px solid #242424 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Floating Comment Form in Dark Mode */
+body.dark .floating-comment-form {
+  background: #242424 !important;
+  border-top: 1px solid #242424 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .floating-comment-form input[type="text"] {
+  background: #181818 !important;
+  border: 1px solid #242424 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .floating-comment-form label {
+  color: #3897f0 !important;
+}
+
+body.dark .floating-comment-form button {
+  color: #3897f0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+body.dark .floating-comment-form .replying-to {
+  background: #242424 !important;
+  border: 1px solid #242424 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .floating-comment-form .replying-to a {
+  color: #3897f0 !important;
+}
+
+/* Dark Mode for Search Recommendations */
+body.dark .recommendations-grid {
+  /* Optionally, you can change the background of the grid container if needed */
+  background-color: transparent;
+}
+
+body.dark .recommendation-item {
+  background: #242424 !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark .recommendation-item p {
+  color: #e0e0e0 !important;
+}
+
+/* ---------- Dark Mode Overrides for Modal, Grid, and Form ---------- */
+body.dark .modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+}
+body.dark .modal-content {
+  background-color: #181818;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #333;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 8px;
+  position: relative;
+  color: #e0e0e0;
+}
+body.dark .modal .close {
+  color: #ccc;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.dark .modal .close:hover,
+body.dark .modal .close:focus {
+  color: #fff;
+}
+body.dark .multiple-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+}
+body.dark .video-thumbnail-container {
+  position: relative;
+}
+body.dark .video-play-icon {
+  color: rgba(224, 224, 224, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+body.dark .profile-grid {
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+body.dark .profile-grid .grid-item {
+  border: 1px solid #444;
+  background-color: #242424;
+}
+body.dark .profile-grid .grid-item img {
+  object-fit: cover;
+}
+
+/* Dark Mode Overrides for Settings Form and Media Buttons */
+body.dark .settings-form form {
+  background: #242424 !important;
+  border: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .settings-form form label,
+body.dark .settings-form form input[type="submit"],
+body.dark .settings-form form input[type="file"] {
+  color: #e0e0e0 !important;
+}
+
+body.dark .settings-tabs button {
+  background: #242424 !important;
+  border: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .dm-view-container {
+  background-color: #242424 !important;
+  border: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+body.dark .dm-header {
+  background-color: #181818 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+body.dark .dm-header h2 {
+  color: #e0e0e0 !important;
+}
+
+body.dark .dm-messages {
+  background-color: #181818 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .dm-messages .dm-message.sent .message-content {
+  background-color: #3897f0 !important;
+  color: #fff !important;
+}
+
+body.dark .dm-messages .dm-message.received .message-content {
+  background-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .dm-messages .message-timestamp {
+  color: #aaa !important;
+}
+
+body.dark .dm-input {
+  background-color: #181818 !important;
+  border-top: 1px solid #333 !important;
+}
+
+body.dark .dm-input input[type="text"] {
+  background-color: #2a2a2a !important;
+  border: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark .dm-input button {
+  background-color: #0095f6 !important;
+  color: #fff !important;
+  border: none !important;
+}
+

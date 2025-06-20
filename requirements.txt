@@ -1,0 +1,7 @@
+Flask==2.2.5
+Flask-SQLAlchemy==3.0.2
+Flask-Login==0.6.2
+pyngrok==5.2.4
+moviepy==1.0.3
+SQLAlchemy==1.4.46
+Werkzeug==2.2.3
